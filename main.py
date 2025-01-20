@@ -82,7 +82,6 @@ def query_knowledge_base(query, top_k=3):
     return response.choices[0].message.content
 
 
-# Step 5: API Endpoint
 @app.post("/query")
 def ask_agent(request: QueryRequest):
     try:
