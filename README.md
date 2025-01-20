@@ -23,6 +23,20 @@ Use the following command to run the FastAPI application:
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
+### Perform testing
+
+```bash
+import requests
+
+url = "http://0.0.0.0:8000/query"
+
+data = {"query": "What is Data engineering ?"}
+
+response = requests.post(url, json=data, headers = {"Content-Type": "application/json"})
+
+response.json().get("response")
+```
+
 ### Flow Diagram
 
 ```python
